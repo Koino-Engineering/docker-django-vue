@@ -3,7 +3,7 @@ volumes:
     node_modules:
 services:
   front:
-    image: node:14
+    image: node:fermium
     volumes:
       - ./front/:/src
       - node_modules:/src/node_modules
