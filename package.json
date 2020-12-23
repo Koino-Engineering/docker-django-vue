@@ -1,0 +1,22 @@
+{
+  "name": "docker-django-vue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "vue": "vue"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Koino-Engineering/docker-django-vue.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Koino-Engineering/docker-django-vue/issues"
+  },
+  "homepage": "https://github.com/Koino-Engineering/docker-django-vue#readme",
+  "devDependencies": {
+    "@vue/cli": "^4.5.9"
+  }
+}
