@@ -1,5 +1,6 @@
 version: "3"
 volumes:
+    dummy_git:
     node_modules:
     dbdata:
 services:
@@ -7,6 +8,7 @@ services:
     image: node:fermium
     volumes:
       - ./front/:/src
+      - dummy_git:/src/.git
       - node_modules:/src/node_modules
     working_dir: /src
     command: tail -f /dev/null
