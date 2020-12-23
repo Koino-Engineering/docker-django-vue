@@ -1,6 +1,7 @@
 version: "3"
 volumes:
     node_modules:
+    dbdata:
 services:
   front:
     image: node:fermium
@@ -11,3 +12,21 @@ services:
     command: tail -f /dev/null
     ports: 
       - 8080:8080
+  back:
+    image: django:latest
+    volumes:
+      - ./back/:/src
+    working_dir: /src
+    command: python3 manage.py runserver 0.0.0.0:5000
+    ports: 
+      - 5000:5000
+  db:
+    image: postgres:13
+    volumes: 
+      - dbdata:/var/lib/postgresql/data
+    ports: 
+      - "5432"
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
