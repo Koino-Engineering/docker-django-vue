@@ -9,5 +9,12 @@ module.exports = {
         pathRewrite: { '^/coupon/': '/coupon/' }
       }
     }
+  },
+  configureWebpack: {
+    devServer: {
+      watchOptions: {
+        poll: true
+      }
+    }
   }
 }
