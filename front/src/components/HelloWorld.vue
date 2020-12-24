@@ -31,6 +31,7 @@
       <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
     </ul>
+    <div>{{ data }}</div>
   </div>
 </template>
 
@@ -41,6 +42,21 @@ export default defineComponent({
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+  data () {
+    return {
+      data: ''
+    }
+  },
+  mounted () {
+    setTimeout(async () => {
+      const code = Math.random() < 0.5 ? '0001' : '0002'
+      return fetch('/coupon/?coupon_code=' + code, {
+        mode: 'cors'
+      })
+        .then(res => res.text())
+        .then(coupon => { this.data = coupon })
+    }, 1000)
   }
 })
 </script>
