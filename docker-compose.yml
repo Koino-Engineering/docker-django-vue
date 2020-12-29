@@ -19,7 +19,7 @@ services:
     volumes:
       - ./back/:/src
     working_dir: /src
-    command: bash -c "pip install -U pip && pip install -U -r requirements.txt && python manage.py migrate && python manage.py runserver 0.0.0.0:5000"
+    command: bash -c "pip install -U -r requirements.txt && python manage.py migrate && python manage.py runserver 0.0.0.0:5000"
     ports: 
       - 5000:5000
     depends_on:
