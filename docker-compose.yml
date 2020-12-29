@@ -11,7 +11,7 @@ services:
       - dummy_git:/src/.git
       - node_modules:/src/node_modules
     working_dir: /src
-    command: tail -f /dev/null
+    command: bash -c "npm ci && npm start"
     ports: 
       - 8080:8080
   back:
