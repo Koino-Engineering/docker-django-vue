@@ -1,20 +1,36 @@
-version: '3'
-
+version: "3"
+volumes:
+    dummy_git:
+    node_modules:
+    dbdata:
 services:
-   app:
-       build: .
-       command: python3 manage.py runserver 0.0.0.0:8000
-       volumes:
-           - .:/code
-       ports:
-           - "8001:8000"
-       depends_on:
-           - db
-   db:
-       image: postgres
-       ports: 
-           - "5432"
-       environment:
-         - POSTGRES_DB=postgres
-         - POSTGRES_USER=postgres
-         - POSTGRES_PASSWORD=postgres
+  front:
+    image: node:fermium
+    volumes:
+      - ./front/:/src
+      - dummy_git:/src/.git
+      - node_modules:/src/node_modules
+    working_dir: /src
+    command: bash -c "npm ci && npm start"
+    ports: 
+      - 8080:8080
+  back:
+    image: python:3
+    volumes:
+      - ./back/:/src
+    working_dir: /src
+    command: bash -c "pip install -U -r requirements.txt && python manage.py migrate && python manage.py loaddata ./dump/data.json && python manage.py runserver 0.0.0.0:5000"
+    ports: 
+      - 5000:5000
+    depends_on:
+      - db
+  db:
+    image: postgres:13
+    volumes: 
+      - dbdata:/var/lib/postgresql/data
+    ports: 
+      - "5432"
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
