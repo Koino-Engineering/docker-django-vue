@@ -120,31 +120,31 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: 'HelloWorld',
-  props: {
-    msg: String
-  },
-  data () {
-    return {
-      data: ''
+    name: "HelloWorld",
+    props: {
+        msg: String
+    },
+    data () {
+        return {
+            data: ""
+        };
+    },
+    mounted () {
+        setTimeout(async () => {
+            const code = Math.random() < 0.5 ? "0001" : "0002";
+            return fetch("/coupon/?coupon_code=" + code, {
+                mode: "cors"
+            })
+                .then((res) => { return res.text(); })
+                .then((coupon) => {
+                    this.data = coupon;
+                });
+        }, 1000);
     }
-  },
-  mounted () {
-    setTimeout(async () => {
-      const code = Math.random() < 0.5 ? '0001' : '0002'
-      return fetch('/coupon/?coupon_code=' + code, {
-        mode: 'cors'
-      })
-        .then((res) => res.text())
-        .then((coupon) => {
-          this.data = coupon
-        })
-    }, 1000)
-  }
-})
+});
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
