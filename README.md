@@ -20,3 +20,5 @@ docker-compose up
   - API操作
     - `localhost:5000/users`
     - `localhost:5000/groups`
+  - DBダンプ
+    - `python manage.py dumpdata --natural-foreign --exclude auth.permission --exclude contenttypes --indent 4 > data.json `
