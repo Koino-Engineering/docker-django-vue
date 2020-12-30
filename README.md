@@ -21,4 +21,4 @@ docker-compose up
     - `localhost:5000/users`
     - `localhost:5000/groups`
   - DBダンプ
-    - `python manage.py dumpdata --natural-foreign --exclude auth.permission --exclude contenttypes --indent 4 > data.json `
+    - `python manage.py dumpdata --natural-foreign --exclude auth.permission --exclude contenttypes --indent 4 > ./dump/data.json`

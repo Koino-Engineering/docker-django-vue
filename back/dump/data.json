@@ -27,8 +27,8 @@
     "model": "auth.user",
     "pk": 1,
     "fields": {
-        "password": "pbkdf2_sha256$216000$MGVIyCbpdYqq$PeW6T4SgQIm1DsgNIT6uY3GzXEItskywLURrO72Fz7g=",
-        "last_login": "2020-12-30T04:51:24.552Z",
+        "password": "pbkdf2_sha256$216000$7zVGyppo7EvS$Sv2dNGcBxxN3cqn6b7lg8YibLH07iZQQM7yq6iAaPHU=",
+        "last_login": "2020-12-30T06:15:28.510Z",
         "is_superuser": true,
         "username": "admin",
         "first_name": "",
@@ -36,7 +36,7 @@
         "email": "admin@example.com",
         "is_staff": true,
         "is_active": true,
-        "date_joined": "2020-12-30T04:51:08.151Z",
+        "date_joined": "2020-12-30T06:13:04.225Z",
         "groups": [],
         "user_permissions": []
     }
@@ -54,10 +54,10 @@
         "email": "test1@example.com",
         "is_staff": false,
         "is_active": true,
-        "date_joined": "2020-12-30T04:55:49.180Z",
+        "date_joined": "2020-12-30T06:15:44.243Z",
         "groups": [
             [
-                "user"
+                "admin"
             ]
         ],
         "user_permissions": []
@@ -76,7 +76,29 @@
         "email": "test2@example.com",
         "is_staff": false,
         "is_active": true,
-        "date_joined": "2020-12-30T04:56:01.045Z",
+        "date_joined": "2020-12-30T06:16:34.086Z",
+        "groups": [
+            [
+                "user"
+            ]
+        ],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 4,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "test3",
+        "first_name": "",
+        "last_name": "",
+        "email": "test3@example.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2020-12-30T06:16:46.535Z",
         "groups": [
             [
                 "guest"
@@ -87,10 +109,42 @@
 },
 {
     "model": "sessions.session",
-    "pk": "qf9ud6nifq6lg727d8iuiqrnebyrky9w",
+    "pk": "ahrnhysce7y64lpwdw19wberfjfyr4qm",
     "fields": {
-        "session_data": ".eJxVjEsOwjAMBe-SNYqcpnVcluw5Q-TELimgVOpnhbg7VOoCtm9m3stE3tYSt0XnOIo5G2dOv1vi_NC6A7lzvU02T3Wdx2R3xR50sddJ9Hk53L-Dwkv51gQBUDLlBgg9EnjtCRST5qGRDtC34J3rHHeMgVoZ1BOSCPeKmIJ5fwC5Mjcg:1kuTSG:NxYTEZW6dPTadpCwzCQGdmQQtYZ_hPTBphVQ0WSSgp8",
-        "expire_date": "2021-01-13T04:51:24.610Z"
+        "session_data": ".eJxVjDsOwyAQBe9CHSHj5bNOmd5nsBZYgpMIJGNXUe4eIblI2jcz7y0WOva8HI23ZY3iKpS4_G6ewpNLB_FB5V5lqGXfVi-7Ik_a5Fwjv26n-3eQqeVeMwA7p8LEySFaJDSgFQyjDog6WcswpESsInqrLeqYHBg1mdGbYI34fAHSUzc4:1kuUlc:oR4ITPNFYPC_33xazWpKj2FzLkenyKL4Ot_6uOtCunY",
+        "expire_date": "2021-01-13T06:15:28.636Z"
+    }
+},
+{
+    "model": "wiki.article",
+    "pk": 1,
+    "fields": {
+        "title": "test1",
+        "description": "test1 description"
+    }
+},
+{
+    "model": "wiki.article",
+    "pk": 2,
+    "fields": {
+        "title": "test2",
+        "description": "test2 description"
+    }
+},
+{
+    "model": "utils.basemodel",
+    "pk": 1,
+    "fields": {
+        "created_at": "2020-12-30T06:19:27.073Z",
+        "updated_at": "2020-12-30T06:19:27.074Z"
+    }
+},
+{
+    "model": "utils.basemodel",
+    "pk": 2,
+    "fields": {
+        "created_at": "2020-12-30T06:19:35.509Z",
+        "updated_at": "2020-12-30T06:19:35.509Z"
     }
 }
 ]
