@@ -17,7 +17,7 @@
 },
 {
     "model": "auth.group",
-    "pk": 3,
+    "pk": 4,
     "fields": {
         "name": "guest",
         "permissions": []
@@ -27,8 +27,8 @@
     "model": "auth.user",
     "pk": 1,
     "fields": {
-        "password": "pbkdf2_sha256$216000$7zVGyppo7EvS$Sv2dNGcBxxN3cqn6b7lg8YibLH07iZQQM7yq6iAaPHU=",
-        "last_login": "2020-12-30T06:15:28.510Z",
+        "password": "pbkdf2_sha256$216000$nYuElmHodoR3$ouk+5H42A0NdFOfkFgCaT8cstDwuzGooXBPvjrRB/wU=",
+        "last_login": "2020-12-30T08:36:45.984Z",
         "is_superuser": true,
         "username": "admin",
         "first_name": "",
@@ -36,8 +36,12 @@
         "email": "admin@example.com",
         "is_staff": true,
         "is_active": true,
-        "date_joined": "2020-12-30T06:13:04.225Z",
-        "groups": [],
+        "date_joined": "2020-12-30T08:19:31.533Z",
+        "groups": [
+            [
+                "admin"
+            ]
+        ],
         "user_permissions": []
     }
 },
@@ -54,10 +58,10 @@
         "email": "test1@example.com",
         "is_staff": false,
         "is_active": true,
-        "date_joined": "2020-12-30T06:15:44.243Z",
+        "date_joined": "2020-12-30T08:40:53.869Z",
         "groups": [
             [
-                "admin"
+                "user"
             ]
         ],
         "user_permissions": []
@@ -76,29 +80,7 @@
         "email": "test2@example.com",
         "is_staff": false,
         "is_active": true,
-        "date_joined": "2020-12-30T06:16:34.086Z",
-        "groups": [
-            [
-                "user"
-            ]
-        ],
-        "user_permissions": []
-    }
-},
-{
-    "model": "auth.user",
-    "pk": 4,
-    "fields": {
-        "password": "",
-        "last_login": null,
-        "is_superuser": false,
-        "username": "test3",
-        "first_name": "",
-        "last_name": "",
-        "email": "test3@example.com",
-        "is_staff": false,
-        "is_active": true,
-        "date_joined": "2020-12-30T06:16:46.535Z",
+        "date_joined": "2020-12-30T08:41:00.865Z",
         "groups": [
             [
                 "guest"
@@ -109,16 +91,19 @@
 },
 {
     "model": "sessions.session",
-    "pk": "ahrnhysce7y64lpwdw19wberfjfyr4qm",
+    "pk": "b41zqt58tbz2gtjkf9mwiqpbvk8jcgwl",
     "fields": {
-        "session_data": ".eJxVjDsOwyAQBe9CHSHj5bNOmd5nsBZYgpMIJGNXUe4eIblI2jcz7y0WOva8HI23ZY3iKpS4_G6ewpNLB_FB5V5lqGXfVi-7Ik_a5Fwjv26n-3eQqeVeMwA7p8LEySFaJDSgFQyjDog6WcswpESsInqrLeqYHBg1mdGbYI34fAHSUzc4:1kuUlc:oR4ITPNFYPC_33xazWpKj2FzLkenyKL4Ot_6uOtCunY",
-        "expire_date": "2021-01-13T06:15:28.636Z"
+        "session_data": ".eJxVjDEOAiEQRe9CbQiDg6ClvWcgMzDIqmGTZbcy3t2QbKHtf-_9t4q0rTVuXZY4ZXVRoA6_G1N6ShsgP6jdZ53mti4T66HonXZ9m7O8rrv7d1Cp11EfyaIg-BJOgBSSR0sG2REXNiRYLHOA4BmKC5LAepcy-czGOjiD-nwB7Js4Fw:1kuWyM:E3lWJeYMFrkdJPkGp0gHMQBi_L1XxWF5akXZ_KsTjE8",
+        "expire_date": "2021-01-13T08:36:46.013Z"
     }
 },
 {
     "model": "wiki.article",
     "pk": 1,
     "fields": {
+        "created_at": "2020-12-30T08:36:51.740Z",
+        "updated_at": "2020-12-30T08:36:51.740Z",
+        "deleted_at": null,
         "title": "test1",
         "description": "test1 description"
     }
@@ -127,24 +112,22 @@
     "model": "wiki.article",
     "pk": 2,
     "fields": {
+        "created_at": "2020-12-30T08:37:00.889Z",
+        "updated_at": "2020-12-30T08:37:00.889Z",
+        "deleted_at": null,
         "title": "test2",
         "description": "test2 description"
     }
 },
 {
-    "model": "utils.basemodel",
-    "pk": 1,
+    "model": "wiki.article",
+    "pk": 3,
     "fields": {
-        "created_at": "2020-12-30T06:19:27.073Z",
-        "updated_at": "2020-12-30T06:19:27.074Z"
-    }
-},
-{
-    "model": "utils.basemodel",
-    "pk": 2,
-    "fields": {
-        "created_at": "2020-12-30T06:19:35.509Z",
-        "updated_at": "2020-12-30T06:19:35.509Z"
+        "created_at": "2020-12-30T08:37:11.283Z",
+        "updated_at": "2020-12-30T08:37:11.283Z",
+        "deleted_at": null,
+        "title": "test3",
+        "description": "test3 description"
     }
 }
 ]
