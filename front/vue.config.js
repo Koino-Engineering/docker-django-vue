@@ -3,10 +3,8 @@ module.exports = {
         proxy: {
             "^/coupon/": {
                 target: "http://back:5000",
-                ws: true,
                 changeOrigin: true,
-                logLevel: "debug",
-                pathRewrite: { "^/coupon/": "/coupon/" }
+                logLevel: "debug"
             }
         }
     },
