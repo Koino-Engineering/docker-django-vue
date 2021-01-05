@@ -7,7 +7,8 @@
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
-    "lint:fixall": "vue-cli-service lint --fix"
+    "lint:fixall": "vue-cli-service lint --fix",
+    "swagger-to-ts": "npx openapi-typescript http://back:5000/swagger.json --output src/api/interfaces.ts"
   },
   "dependencies": {
     "core-js": "^3.6.5",
