@@ -1,7 +1,19 @@
 <template>
-  <div id="Articles">
-      {{ articles }}
-  </div>
+    <div id="Articles">
+        <div v-if="articles">
+            <ul id="array-rendering">
+                <li
+                v-for="article in articles.results"
+                :key="article.id"
+                >
+                {{ article.description }}
+                </li>
+            </ul>
+        </div>
+        <div v-else>
+            Loading...
+        </div>
+    </div>
 </template>
 
 <script lang="ts">
