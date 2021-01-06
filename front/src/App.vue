@@ -1,7 +1,8 @@
 <template>
   <div id="nav">
     <router-link :to="Routes.HOME">Home</router-link> |
-    <router-link :to="Routes.ABOUT">About</router-link>
+    <router-link :to="Routes.ABOUT">About</router-link> |
+    <router-link :to="Routes.ARTICLES">Articles</router-link>
   </div>
   <router-view />
 </template>
@@ -37,8 +38,8 @@ export default defineComponent({
     name: "App",
     setup () {
         return {
-            Routes
+            Routes,
         };
-    }
+    },
 });
 </script>

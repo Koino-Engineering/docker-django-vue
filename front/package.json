@@ -11,6 +11,7 @@
     "swagger-to-ts": "npx openapi-typescript http://back:5000/swagger.json --output src/api/interfaces.ts"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "core-js": "^3.6.5",
     "register-service-worker": "^1.7.1",
     "vue": "^3.0.0",
