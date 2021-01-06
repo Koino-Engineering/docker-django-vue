@@ -6,7 +6,7 @@
 // eslint-disable-next-line @typescript-eslint/class-name-casing
 export interface definitions {
   Article: {
-    url?: string;
+    id?: number;
     created_at?: string;
     updated_at?: string;
     deleted_at?: string;
