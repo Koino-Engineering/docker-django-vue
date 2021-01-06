@@ -3,7 +3,7 @@ from rest_framework import serializers
 from utils.models import BaseModel
 
 
-class BaseModelSerializer(serializers.HyperlinkedModelSerializer):
+class BaseModelSerializer(serializers.ModelSerializer):
     class Meta:
         model = BaseModel
         fields = '__all__'
