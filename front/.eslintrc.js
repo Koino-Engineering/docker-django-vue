@@ -3,15 +3,15 @@ const warn = process.env.NODE_ENV === "development" ? "warn" : "error";
 module.exports = {
     root: true,
     env: {
-        node: true
+        node: true,
     },
     extends: [
         "plugin:vue/vue3-essential",
         "@vue/standard",
-        "@vue/typescript/recommended"
+        "@vue/typescript/recommended",
     ],
     parserOptions: {
-        ecmaVersion: 2020
+        ecmaVersion: 2020,
     },
     rules: {
         "@typescript-eslint/no-explicit-any": warn,
@@ -27,17 +27,18 @@ module.exports = {
         "no-unused-vars": "off",
         "object-curly-spacing": ["error", "always"],
         quotes: ["error", "double", { allowTemplateLiterals: true }],
-        semi: ["error", "always"]
+        semi: ["error", "always"],
+        "comma-dangle": ["error", "always-multiline"],
     },
     overrides: [
         {
             files: [
                 "**/__tests__/*.{j,t}s?(x)",
-                "**/tests/unit/**/*.spec.{j,t}s?(x)"
+                "**/tests/unit/**/*.spec.{j,t}s?(x)",
             ],
             env: {
-                jest: true
-            }
-        }
-    ]
+                jest: true,
+            },
+        },
+    ],
 };
