@@ -4,15 +4,20 @@ module.exports = {
             "^/coupon/": {
                 target: "http://back:5000",
                 changeOrigin: true,
-                logLevel: "debug"
-            }
-        }
+                logLevel: "debug",
+            },
+            "^/articles": {
+                target: "http://back:5000",
+                changeOrigin: true,
+                logLevel: "debug",
+            },
+        },
     },
     configureWebpack: {
         devServer: {
             watchOptions: {
-                poll: true
-            }
-        }
-    }
+                poll: true,
+            },
+        },
+    },
 };

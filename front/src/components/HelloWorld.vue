@@ -116,34 +116,41 @@
       </li>
     </ul>
     <div>{{ data }}</div>
+    <div>{{ articles }}</div>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import api from "@/api";
 
 export default defineComponent({
     name: "HelloWorld",
     props: {
-        msg: String
+        msg: String,
     },
     data () {
         return {
-            data: ""
+            data: "",
+            articles: "",
         };
     },
     mounted () {
         setTimeout(async () => {
             const code = Math.random() < 0.5 ? "0001" : "0002";
             return fetch("/coupon/?coupon_code=" + code, {
-                mode: "cors"
+                mode: "cors",
             })
                 .then((res) => { return res.text(); })
                 .then((coupon) => {
                     this.data = coupon;
-                });
+                })
+                .then(() => {
+                    return api().Articles.get();
+                })
+                .then((res) => { this.articles = JSON.stringify(res); });
         }, 1000);
-    }
+    },
 });
 </script>
 
