@@ -8,4 +8,5 @@ class Article(BaseModel):
     description = models.CharField(max_length=1000)
 
     class Meta:
-        unique_together = ('title', 'deleted_at')
+        models.UniqueConstraint(
+            fields=['title', 'deleted_at'], name='unique_booking')

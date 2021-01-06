@@ -9,7 +9,7 @@ export interface definitions {
     url?: string;
     created_at?: string;
     updated_at?: string;
-    deleted_at: string;
+    deleted_at?: string;
     title: string;
     description: string;
   };
