@@ -29,6 +29,8 @@ module.exports = {
         quotes: ["error", "double", { allowTemplateLiterals: true }],
         semi: ["error", "always"],
         "comma-dangle": ["error", "always-multiline"],
+        camelcase: "off",
+        "@typescript-eslint/camelcase": "off",
     },
     overrides: [
         {
