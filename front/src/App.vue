@@ -1,7 +1,8 @@
 <template>
   <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link :to="Routes.HOME">Home</router-link> |
+    <router-link :to="Routes.ABOUT">About</router-link> |
+    <router-link :to="Routes.ARTICLES">Articles</router-link>
   </div>
   <router-view />
 </template>
@@ -28,3 +29,17 @@
   }
 }
 </style>
+
+<script lang="ts">
+import { defineComponent } from "vue";
+import Routes from "./router/routes";
+
+export default defineComponent({
+    name: "App",
+    setup () {
+        return {
+            Routes,
+        };
+    },
+});
+</script>
