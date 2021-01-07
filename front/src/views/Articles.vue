@@ -1,18 +1,6 @@
 <template>
     <div id="Articles">
-        <div v-if="articles">
-            <ul id="array-rendering">
-                <li
-                v-for="article in articles.results"
-                :key="article.id"
-                >
-                {{ article.description }}
-                </li>
-            </ul>
-        </div>
-        <div v-else>
-            Loading...
-        </div>
+        <ArtileList/>
     </div>
 </template>
 
@@ -20,6 +8,7 @@
 import { defineComponent } from "vue";
 import api from "@/api";
 import { ArticlesGetResponse } from "@/api/Articles";
+import ArtileList from "@/components/ArticleList.vue";
 
 interface ArticlesData {
      articles: ArticlesGetResponse|null;
@@ -46,6 +35,7 @@ export default defineComponent({
         }, 1000);
     },
     components: {
+        ArtileList,
     },
 });
 </script>
